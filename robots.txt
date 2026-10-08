@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sr-mobile-and-repairing-shop-pali.digiprofiles.in/sitemap.xml
