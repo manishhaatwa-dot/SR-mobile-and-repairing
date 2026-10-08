@@ -21,14 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
         "manishhaatwa-dot";
 
     const GITHUB_REPO =
-        "YOUR-REPOSITORY-NAME";
+        "SR-mobile-and-repairing";
 
     const GITHUB_BRANCH =
         "main";
 
 
     /* =====================================================
-       PRODUCT CATEGORIES
+       PRODUCT FOLDERS
     ===================================================== */
 
     const categories = {
@@ -180,14 +180,15 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
 
             return;
+
         }
 
 
         images.forEach(file => {
 
+
             const card =
                 document.createElement("div");
-
 
             card.className =
                 "product-card";
@@ -196,14 +197,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const imageWrap =
                 document.createElement("div");
 
-
             imageWrap.className =
                 "product-image-wrap";
 
 
             const image =
                 document.createElement("img");
-
 
             image.className =
                 "product-image";
@@ -222,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             /* =============================================
-               PRODUCT NAME FROM FILE NAME
+               FILE NAME → PRODUCT NAME
             ============================================= */
 
             let productName =
@@ -233,12 +232,21 @@ document.addEventListener("DOMContentLoaded", () => {
                     .trim();
 
 
-            productName =
-                productName.replace(
-                    /\b[a-z]/g,
-                    letter =>
-                        letter.toUpperCase()
-                );
+            /*
+             * First letter capital
+             * Hindi filename भी वैसे ही रहेगा
+             */
+
+            if (/^[a-zA-Z]/.test(productName)) {
+
+                productName =
+                    productName.replace(
+                        /\b[a-z]/g,
+                        letter =>
+                            letter.toUpperCase()
+                    );
+
+            }
 
 
             image.alt =
@@ -259,10 +267,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         align-items:center;
                         justify-content:center;
                         color:#0078d4;
-                        background:#eaf6ff;
+                        background:#eef8ff;
                         font-size:35px;
                     ">
+
                         <i class="fa-regular fa-image"></i>
+
                     </div>
                 `;
 
@@ -281,7 +291,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const name =
                 document.createElement("div");
 
-
             name.className =
                 "product-name";
 
@@ -289,10 +298,6 @@ document.addEventListener("DOMContentLoaded", () => {
             name.textContent =
                 productName;
 
-
-            /* =============================================
-               ADD TO CARD
-            ============================================= */
 
             card.appendChild(
                 imageWrap
