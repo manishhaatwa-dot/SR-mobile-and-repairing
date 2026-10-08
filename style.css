@@ -10,6 +10,12 @@
     --teal: #008f9c;
     --purple: #6b4ce6;
 
+    --instagram: #e1306c;
+    --instagram2: #833ab4;
+
+    --whatsapp: #25d366;
+    --whatsapp-dark: #128c7e;
+
     --light-blue: #eaf6ff;
     --light-cyan: #e9fbfc;
     --light-purple: #f3efff;
@@ -52,6 +58,7 @@ body {
         );
 
     color: var(--text);
+
     line-height: 1.6;
 }
 
@@ -106,13 +113,11 @@ img {
 .brand {
     display: flex;
     align-items: center;
+
     gap: 15px;
 
     min-width: 0;
 }
-
-
-/* LOGO */
 
 .brand-icon {
     width: 64px;
@@ -142,7 +147,6 @@ img {
         0 5px 16px rgba(0, 120, 212, 0.25);
 }
 
-
 .brand-icon img {
     width: 100%;
     height: 100%;
@@ -157,12 +161,9 @@ img {
 }
 
 
-/* BRAND TEXT */
-
 .brand-text {
     min-width: 0;
 }
-
 
 .brand-text h1 {
     font-size: 1.45rem;
@@ -189,7 +190,6 @@ img {
     color: transparent;
 }
 
-
 .brand-text p {
     margin: 0;
 
@@ -204,18 +204,20 @@ img {
 
 
 /* =========================================================
-   HEADER ACTIONS
+   HEADER BUTTONS
 ========================================================= */
 
 .header-actions {
     display: flex;
     align-items: center;
+
     gap: 10px;
 }
 
 .header-call,
 .header-whatsapp {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -225,38 +227,31 @@ img {
 
     border-radius: 12px;
 
+    color: white;
+
     font-size: 0.85rem;
+
     font-weight: 600;
 
     transition: 0.25s ease;
 }
 
 .header-call {
-    color: white;
-
     background:
         linear-gradient(
             135deg,
             #0078d4,
             #009ed1
         );
-
-    box-shadow:
-        0 5px 15px rgba(0, 120, 212, 0.20);
 }
 
 .header-whatsapp {
-    color: white;
-
     background:
         linear-gradient(
             135deg,
-            #008f9c,
-            #00b7c3
+            #128c7e,
+            #25d366
         );
-
-    box-shadow:
-        0 5px 15px rgba(0, 183, 195, 0.18);
 }
 
 .header-call:hover,
@@ -266,7 +261,7 @@ img {
 
 
 /* =========================================================
-   OWNER SECTION
+   OWNER
 ========================================================= */
 
 .owner-section {
@@ -316,9 +311,6 @@ img {
             #00b7c3,
             #6b4ce6
         );
-
-    box-shadow:
-        0 10px 28px rgba(0, 100, 180, 0.18);
 }
 
 .owner-photo {
@@ -417,35 +409,34 @@ img {
 
     font-weight: 600;
 
+    transition: 0.25s ease;
+}
+
+.call-btn {
     background:
         linear-gradient(
             135deg,
             #0078d4,
             #00a6c7
         );
-
-    box-shadow:
-        0 5px 15px rgba(0, 120, 212, 0.16);
-
-    transition: 0.25s ease;
-}
-
-.quick-btn:hover {
-    transform: translateY(-2px);
 }
 
 .whatsapp-btn {
     background:
         linear-gradient(
             135deg,
-            #008f9c,
-            #00b7c3
+            #128c7e,
+            #25d366
         );
+}
+
+.quick-btn:hover {
+    transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   INFORMATION
+   INFORMATION CARDS
 ========================================================= */
 
 .info-section {
@@ -504,39 +495,56 @@ img {
     color: white;
 
     font-size: 1.15rem;
+}
 
+
+/* CONTACT BLUE */
+
+.contact-icon {
     background:
         linear-gradient(
             135deg,
+            #0078d4,
+            #00a6c7
+        );
+}
+
+
+/* WHATSAPP GREEN */
+
+.whatsapp-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #128c7e,
+            #25d366
+        );
+}
+
+
+/* INSTAGRAM PINK */
+
+.instagram-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #833ab4,
+            #e1306c,
+            #fd1d1d,
+            #fcb045
+        );
+}
+
+
+/* LOCATION BLUE */
+
+.location-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #0067b8,
             #0078d4,
             #00b7c3
-        );
-}
-
-.info-card:nth-child(2) .info-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #6b4ce6,
-            #8a6ff0
-        );
-}
-
-.info-card:nth-child(3) .info-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #008f9c,
-            #00c2b8
-        );
-}
-
-.info-card:nth-child(4) .info-icon {
-    background:
-        linear-gradient(
-            135deg,
-            #0078d4,
-            #6b4ce6
         );
 }
 
@@ -636,8 +644,6 @@ img {
             #00b7c3,
             #6b4ce6
         );
-
-    color: white;
 }
 
 .heading-line i {
@@ -908,9 +914,6 @@ img {
 
 .service-card:hover {
     transform: translateY(-5px);
-
-    box-shadow:
-        0 12px 28px rgba(0, 100, 180, 0.12);
 }
 
 .service-icon {
@@ -981,7 +984,7 @@ img {
 
 
 /* =========================================================
-   CONTACT
+   CONTACT SECTION
 ========================================================= */
 
 .contact-section {
@@ -992,9 +995,9 @@ img {
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(4, 1fr);
 
-    gap: 18px;
+    gap: 15px;
 }
 
 .contact-box {
@@ -1002,46 +1005,59 @@ img {
 
     align-items: center;
 
-    gap: 14px;
+    gap: 12px;
 
-    padding: 20px;
+    padding: 18px;
 
     border-radius: 18px;
 
     color: white;
 
+    box-shadow:
+        0 8px 22px rgba(0, 120, 212, 0.12);
+}
+
+.call-contact {
     background:
         linear-gradient(
             135deg,
             #0078d4,
-            #008fb5
+            #00a6c7
         );
-
-    box-shadow:
-        0 8px 22px rgba(0, 120, 212, 0.15);
 }
 
-.contact-box:nth-child(2) {
+.whatsapp-contact {
     background:
         linear-gradient(
             135deg,
-            #008f9c,
+            #128c7e,
+            #25d366
+        );
+}
+
+.instagram-contact {
+    background:
+        linear-gradient(
+            135deg,
+            #833ab4,
+            #e1306c,
+            #fd1d1d
+        );
+}
+
+.location-contact {
+    background:
+        linear-gradient(
+            135deg,
+            #0067b8,
+            #0078d4,
             #00b7c3
         );
 }
 
-.contact-box:nth-child(3) {
-    background:
-        linear-gradient(
-            135deg,
-            #5942c9,
-            #795ce7
-        );
-}
-
 .contact-icon {
-    width: 48px;
-    height: 48px;
+    width: 45px;
+    height: 45px;
 
     flex-shrink: 0;
 
@@ -1050,18 +1066,18 @@ img {
     align-items: center;
     justify-content: center;
 
-    border-radius: 14px;
+    border-radius: 13px;
 
     background:
         rgba(255, 255, 255, 0.18);
 
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .contact-text span {
     display: block;
 
-    font-size: 0.7rem;
+    font-size: 0.65rem;
 
     font-weight: 700;
 
@@ -1075,7 +1091,7 @@ img {
 
     margin-top: 2px;
 
-    font-size: 0.9rem;
+    font-size: 0.84rem;
 
     font-weight: 600;
 }
@@ -1103,38 +1119,6 @@ img {
         );
 }
 
-.footer-logo {
-    width: 65px;
-    height: 65px;
-
-    margin: 0 auto 12px;
-
-    padding: 3px;
-
-    border-radius: 50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #00c2d1,
-            #ffffff,
-            #8b72f0
-        );
-}
-
-.footer-logo img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    border-radius: 50%;
-
-    object-fit: contain;
-
-    background: white;
-}
-
 .footer-brand h3 {
     font-size: 1.2rem;
 
@@ -1158,7 +1142,7 @@ img {
 
     flex-wrap: wrap;
 
-    gap: 15px;
+    gap: 12px;
 }
 
 .footer-contact a {
@@ -1176,13 +1160,6 @@ img {
         rgba(255, 255, 255, 0.12);
 
     font-size: 0.82rem;
-
-    transition: 0.2s ease;
-}
-
-.footer-contact a:hover {
-    background:
-        rgba(255, 255, 255, 0.20);
 }
 
 .footer-address {
@@ -1193,6 +1170,22 @@ img {
     font-size: 0.8rem;
 
     opacity: 0.78;
+}
+
+.footer-thank-you {
+    margin: 25px auto 10px;
+}
+
+.footer-thank-you h3 {
+    font-size: 1.05rem;
+
+    margin-bottom: 4px;
+}
+
+.footer-thank-you p {
+    font-size: 0.78rem;
+
+    opacity: 0.75;
 }
 
 .footer-bottom {
@@ -1229,11 +1222,7 @@ img {
 
     .contact-section {
         grid-template-columns:
-            1fr 1fr;
-    }
-
-    .contact-box:last-child {
-        grid-column: 1 / -1;
+            repeat(2, 1fr);
     }
 
 }
@@ -1458,10 +1447,6 @@ img {
         gap: 12px;
 
         margin: 55px auto 35px;
-    }
-
-    .contact-box:last-child {
-        grid-column: auto;
     }
 
 
